@@ -1,0 +1,222 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile-first Layout */
+.container {
+    display: flex;
+    flex-direction: column; /* Stacking sections in block format */
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 62.5rem;
+    margin: auto;
+}
+
+.content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    max-width: 35rem;
+    margin: auto;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 8rem;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    #contact {
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        max-width: 90%;
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Mobile Adjustments (iPhone SE, Apple Watch) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background: #444;
+        padding: 0.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Tablet View (min-width: 768px) */
+@media (min-width: 768px) {
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop View (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 1.5rem 3rem;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
